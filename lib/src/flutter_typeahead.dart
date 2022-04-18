@@ -1264,7 +1264,7 @@ class _SuggestionsListState<T> extends State<_SuggestionsList<T>>
 
   Widget createSuggestionsWidget() {
     Widget child = ListView(
-      padding: EdgeInsets.zero,
+      padding: widget.decoration?.contentPadding ?? EdgeInsets.zero,
       primary: false,
       shrinkWrap: true,
       controller: _scrollController,
@@ -1295,6 +1295,9 @@ class _SuggestionsListState<T> extends State<_SuggestionsList<T>>
 /// Supply an instance of this class to the [TypeAhead.suggestionsBoxDecoration]
 /// property to configure the suggestions box decoration
 class SuggestionsBoxDecoration {
+  /// Padding inside suggestions box.
+  final EdgeInsets? contentPaddig; 
+
   /// The z-coordinate at which to place the suggestions box. This controls the size
   /// of the shadow below the box.
   ///
@@ -1337,7 +1340,8 @@ class SuggestionsBoxDecoration {
 
   /// Creates a SuggestionsBoxDecoration
   const SuggestionsBoxDecoration(
-      {this.elevation: 4.0,
+      {this.contentPaddig,
+      this.elevation: 4.0,
       this.color,
       this.shape,
       this.hasScrollbar: true,
