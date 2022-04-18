@@ -1296,7 +1296,7 @@ class _SuggestionsListState<T> extends State<_SuggestionsList<T>>
 /// property to configure the suggestions box decoration
 class SuggestionsBoxDecoration {
   /// Padding inside suggestions box.
-  final EdgeInsets? contentPaddig; 
+  final EdgeInsets? contentPadding; 
 
   /// The z-coordinate at which to place the suggestions box. This controls the size
   /// of the shadow below the box.
@@ -1340,7 +1340,7 @@ class SuggestionsBoxDecoration {
 
   /// Creates a SuggestionsBoxDecoration
   const SuggestionsBoxDecoration(
-      {this.contentPaddig,
+      {this.contentPadding,
       this.elevation: 4.0,
       this.color,
       this.shape,
